@@ -21,6 +21,11 @@
 		0E0C37D11940E5CA00BF0592 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0C37B31940E5CA00BF0592 /* UIKit.framework */; };
 		0E0C37D91940E5CA00BF0592 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E0C37D71940E5CA00BF0592 /* InfoPlist.strings */; };
 		0E0C37DB1940E5CA00BF0592 /* Peek_a_BooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0C37DA1940E5CA00BF0592 /* Peek_a_BooTests.m */; };
+		0E0C37E81940E71100BF0592 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0C37E71940E71100BF0592 /* CoreData.framework */; };
+		0E0C37EB1940E76900BF0592 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0E0C37E91940E76900BF0592 /* DataModel.xcdatamodeld */; };
+		0E0C37F41940ED8700BF0592 /* CreateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0C37F31940ED8700BF0592 /* CreateProfileViewController.m */; };
+		0E0C37F71940F6F900BF0592 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0C37F61940F6F900BF0592 /* User.m */; };
+		0E0C37FA1940F6FA00BF0592 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0C37F91940F6FA00BF0592 /* Photo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,14 @@
 		0E0C37D61940E5CA00BF0592 /* Peek-a-BooTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Peek-a-BooTests-Info.plist"; sourceTree = "<group>"; };
 		0E0C37D81940E5CA00BF0592 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E0C37DA1940E5CA00BF0592 /* Peek_a_BooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Peek_a_BooTests.m; sourceTree = "<group>"; };
+		0E0C37E71940E71100BF0592 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		0E0C37EA1940E76900BF0592 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		0E0C37F21940ED8700BF0592 /* CreateProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateProfileViewController.h; path = ../CreateProfileViewController.h; sourceTree = "<group>"; };
+		0E0C37F31940ED8700BF0592 /* CreateProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateProfileViewController.m; path = ../CreateProfileViewController.m; sourceTree = "<group>"; };
+		0E0C37F51940F6F900BF0592 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		0E0C37F61940F6F900BF0592 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		0E0C37F81940F6FA00BF0592 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		0E0C37F91940F6FA00BF0592 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0C37E81940E71100BF0592 /* CoreData.framework in Frameworks */,
 				0E0C37B21940E5CA00BF0592 /* CoreGraphics.framework in Frameworks */,
 				0E0C37B41940E5CA00BF0592 /* UIKit.framework in Frameworks */,
 				0E0C37B01940E5CA00BF0592 /* Foundation.framework in Frameworks */,
@@ -101,6 +115,7 @@
 		0E0C37AE1940E5CA00BF0592 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E0C37E71940E71100BF0592 /* CoreData.framework */,
 				0E0C37AF1940E5CA00BF0592 /* Foundation.framework */,
 				0E0C37B11940E5CA00BF0592 /* CoreGraphics.framework */,
 				0E0C37B31940E5CA00BF0592 /* UIKit.framework */,
@@ -115,8 +130,15 @@
 				0E0C37BE1940E5CA00BF0592 /* AppDelegate.h */,
 				0E0C37BF1940E5CA00BF0592 /* AppDelegate.m */,
 				0E0C37C11940E5CA00BF0592 /* Main.storyboard */,
+				0E0C37F21940ED8700BF0592 /* CreateProfileViewController.h */,
+				0E0C37F31940ED8700BF0592 /* CreateProfileViewController.m */,
 				0E0C37C41940E5CA00BF0592 /* ViewController.h */,
 				0E0C37C51940E5CA00BF0592 /* ViewController.m */,
+				0E0C37E91940E76900BF0592 /* DataModel.xcdatamodeld */,
+				0E0C37F51940F6F900BF0592 /* User.h */,
+				0E0C37F61940F6F900BF0592 /* User.m */,
+				0E0C37F81940F6FA00BF0592 /* Photo.h */,
+				0E0C37F91940F6FA00BF0592 /* Photo.m */,
 				0E0C37C71940E5CA00BF0592 /* Images.xcassets */,
 				0E0C37B61940E5CA00BF0592 /* Supporting Files */,
 			);
@@ -249,6 +271,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E0C37FA1940F6FA00BF0592 /* Photo.m in Sources */,
+				0E0C37EB1940E76900BF0592 /* DataModel.xcdatamodeld in Sources */,
+				0E0C37F41940ED8700BF0592 /* CreateProfileViewController.m in Sources */,
+				0E0C37F71940F6F900BF0592 /* User.m in Sources */,
 				0E0C37C61940E5CA00BF0592 /* ViewController.m in Sources */,
 				0E0C37C01940E5CA00BF0592 /* AppDelegate.m in Sources */,
 				0E0C37BC1940E5CA00BF0592 /* main.m in Sources */,
@@ -466,6 +492,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0E0C37E91940E76900BF0592 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0E0C37EA1940E76900BF0592 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 0E0C37EA1940E76900BF0592 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0E0C37A41940E5CA00BF0592 /* Project object */;
 }

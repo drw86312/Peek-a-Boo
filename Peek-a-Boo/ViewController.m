@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CreateProfileViewController.h"
+#import "User.h"
 
 @interface ViewController ()
 
@@ -17,13 +19,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"User"];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
+    self.fetchedResultsController.delegate = self;
+    [self.fetchedResultsController performFetch:nil];
 }
 
-- (void)didReceiveMemoryWarning
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    CreateProfileViewController *destinationVC= segue.destinationViewController;
+    destinationVC.managedObjectContextFromSource = self.managedObjectContext;
 }
+
 
 @end

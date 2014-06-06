@@ -44,14 +44,13 @@
         CreateProfileViewController *destinationVC= segue.destinationViewController;
         destinationVC.managedObjectContextFromSource = self.managedObjectContext;
     }
-
     else if ([segue.identifier isEqual:@"ProfileSegue"])
     {
         DetailViewController *detailVC = segue.destinationViewController;
         User *user = [self.fetchedResultsController objectAtIndexPath:self.collectionView.indexPathsForSelectedItems[0]];
         detailVC.profileUser = user;
         detailVC.managedObjectContextUser = self.managedObjectContext;
-
+        [detailVC.navigationItem setTitle:user.name];
     }
 }
 

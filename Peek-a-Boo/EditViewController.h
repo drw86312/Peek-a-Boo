@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
+
 
 @interface EditViewController : UIViewController
+@property User *userEdit;
+@property NSManagedObjectContext *managedObjectContextEdit;
+
 
 @end

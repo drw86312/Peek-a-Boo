@@ -101,13 +101,9 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-
     [picker dismissViewControllerAnimated:YES completion:nil];
-
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-
     self.picData = UIImagePNGRepresentation(image);
-    
 }
 
 @end

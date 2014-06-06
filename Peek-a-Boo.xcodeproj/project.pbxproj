@@ -26,6 +26,10 @@
 		0E0C37F41940ED8700BF0592 /* CreateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0C37F31940ED8700BF0592 /* CreateProfileViewController.m */; };
 		0E0C37F71940F6F900BF0592 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0C37F61940F6F900BF0592 /* User.m */; };
 		0E0C37FA1940F6FA00BF0592 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0C37F91940F6FA00BF0592 /* Photo.m */; };
+		9BDBE2AB194113030045C05B /* ProfileCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBE2AA194113030045C05B /* ProfileCollectionViewCell.m */; };
+		9BDBE2AE19411A6C0045C05B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBE2AD19411A6C0045C05B /* DetailViewController.m */; };
+		9BDBE2B119411AC00045C05B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBE2B019411AC00045C05B /* MapViewController.m */; };
+		9BDBE2B419411AF80045C05B /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDBE2B319411AF80045C05B /* EditViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,14 @@
 		0E0C37F61940F6F900BF0592 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		0E0C37F81940F6FA00BF0592 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		0E0C37F91940F6FA00BF0592 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		9BDBE2A9194113030045C05B /* ProfileCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileCollectionViewCell.h; path = ../ProfileCollectionViewCell.h; sourceTree = "<group>"; };
+		9BDBE2AA194113030045C05B /* ProfileCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileCollectionViewCell.m; path = ../ProfileCollectionViewCell.m; sourceTree = "<group>"; };
+		9BDBE2AC19411A6C0045C05B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		9BDBE2AD19411A6C0045C05B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		9BDBE2AF19411AC00045C05B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		9BDBE2B019411AC00045C05B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		9BDBE2B219411AF80045C05B /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditViewController.h; sourceTree = "<group>"; };
+		9BDBE2B319411AF80045C05B /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +142,18 @@
 				0E0C37BE1940E5CA00BF0592 /* AppDelegate.h */,
 				0E0C37BF1940E5CA00BF0592 /* AppDelegate.m */,
 				0E0C37C11940E5CA00BF0592 /* Main.storyboard */,
+				9BDBE2B219411AF80045C05B /* EditViewController.h */,
+				9BDBE2B319411AF80045C05B /* EditViewController.m */,
+				9BDBE2AF19411AC00045C05B /* MapViewController.h */,
+				9BDBE2B019411AC00045C05B /* MapViewController.m */,
+				9BDBE2AC19411A6C0045C05B /* DetailViewController.h */,
+				9BDBE2AD19411A6C0045C05B /* DetailViewController.m */,
 				0E0C37F21940ED8700BF0592 /* CreateProfileViewController.h */,
 				0E0C37F31940ED8700BF0592 /* CreateProfileViewController.m */,
 				0E0C37C41940E5CA00BF0592 /* ViewController.h */,
 				0E0C37C51940E5CA00BF0592 /* ViewController.m */,
+				9BDBE2A9194113030045C05B /* ProfileCollectionViewCell.h */,
+				9BDBE2AA194113030045C05B /* ProfileCollectionViewCell.m */,
 				0E0C37E91940E76900BF0592 /* DataModel.xcdatamodeld */,
 				0E0C37F51940F6F900BF0592 /* User.h */,
 				0E0C37F61940F6F900BF0592 /* User.m */,
@@ -273,10 +293,14 @@
 			files = (
 				0E0C37FA1940F6FA00BF0592 /* Photo.m in Sources */,
 				0E0C37EB1940E76900BF0592 /* DataModel.xcdatamodeld in Sources */,
+				9BDBE2AE19411A6C0045C05B /* DetailViewController.m in Sources */,
 				0E0C37F41940ED8700BF0592 /* CreateProfileViewController.m in Sources */,
 				0E0C37F71940F6F900BF0592 /* User.m in Sources */,
 				0E0C37C61940E5CA00BF0592 /* ViewController.m in Sources */,
 				0E0C37C01940E5CA00BF0592 /* AppDelegate.m in Sources */,
+				9BDBE2B119411AC00045C05B /* MapViewController.m in Sources */,
+				9BDBE2B419411AF80045C05B /* EditViewController.m in Sources */,
+				9BDBE2AB194113030045C05B /* ProfileCollectionViewCell.m in Sources */,
 				0E0C37BC1940E5CA00BF0592 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +506,7 @@
 				0E0C37E01940E5CA00BF0592 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E0C37E11940E5CA00BF0592 /* Build configuration list for PBXNativeTarget "Peek-a-BooTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +515,7 @@
 				0E0C37E31940E5CA00BF0592 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -9,7 +9,7 @@
 #import "CreateProfileViewController.h"
 
 
-@interface CreateProfileViewController ()
+@interface CreateProfileViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *ageTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cityTextField;
@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *stateTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *premiumSubSwitch;
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
+@property NSData *picData;
+@property (weak, nonatomic) IBOutlet UIImageView *profilePicImageView;
 
 
 @end
@@ -37,7 +39,13 @@
 
 - (IBAction)addPhotoButtonPressed:(id)sender
 {
-    
+
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc]init];
+    imagePickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePickerController.delegate = self;
+    [self presentViewController:imagePickerController animated:YES completion:nil];
+
 }
 - (IBAction)onCreateAccountButtonPressed:(id)sender
 {
@@ -52,10 +60,13 @@
     user.state = self.stateTextField.text;
     user.address = self.addressTextField.text;
     user.premiumMember = @(@(self.premiumSubSwitch.on).intValue);
+    user.profilepic = self.picData;
 
 
     [self.managedObjectContextFromSource save:nil];
+    self.nameTextField.text = @"";
 
+    self.profilePicImageView.image = [UIImage imageWithData:user.profilepic];
 }
 
 -(void)dismissKeyboard
@@ -63,5 +74,15 @@
     [self.view endEditing:YES];
 }
 
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+
+    [picker dismissViewControllerAnimated:YES completion:nil];
+
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+
+    self.picData = UIImagePNGRepresentation(image);
+    
+}
 
 @end

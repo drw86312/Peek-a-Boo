@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import <MapKit/MapKit.h>
 
 @interface DetailViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *addPhotoButtonOutlet;
 @property (weak, nonatomic) IBOutlet UIButton *mapViewButtonOutlet;
 @property (weak, nonatomic) IBOutlet UIButton *editButtonOutlet;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -70,6 +72,7 @@
             self.editButtonOutlet.hidden = NO;
             self.addPhotoButtonOutlet.hidden = NO;
             self.mapViewButtonOutlet.hidden = NO;
+            self.mapView.hidden = NO;
             self.view.backgroundColor = [UIColor whiteColor];
 
             break;
@@ -82,6 +85,7 @@
             self.editButtonOutlet.hidden = YES;
             self.addPhotoButtonOutlet.hidden = YES;
             self.mapViewButtonOutlet.hidden = YES;
+            self.mapView.hidden = YES;
             self.view.backgroundColor = [UIColor blackColor];
 
             CGFloat x = 0.0;

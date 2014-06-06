@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
+#import "Photo.h"
 
 @interface DetailViewController : UIViewController
+
+@property User *profileUser;
+@property NSManagedObjectContext *managedObjectContextUser;
 
 @end

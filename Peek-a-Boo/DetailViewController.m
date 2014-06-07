@@ -7,9 +7,8 @@
 //
 
 #import "DetailViewController.h"
-#import <MapKit/MapKit.h>
 
-@interface DetailViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate>
+@interface DetailViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *userInfoLabel;
 @property NSData *picData;
@@ -29,6 +28,13 @@
     self.imageView.image = [UIImage imageWithData:self.profileUser.profilepic];
     self.userInfoLabel.text = [NSString stringWithFormat:@"Age: %@\nAddress: %@ %@, %@ %@\nEmail: %@\nTelephone: %@", self.profileUser.age.description, self.profileUser.address, self.profileUser.city, self.profileUser.state, self.profileUser.zipcode.description, self.profileUser.email, self.profileUser.phone];
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    [self addUserLocation];
+}
+
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -107,6 +113,29 @@
             break;
     }
 }
+
+- (void)addUserLocation
+{
+    NSString *addressString = [NSString stringWithFormat:@"%@, %@, %@, %@", self.profileUser.address, self.profileUser.city, self.profileUser.state, self.profileUser.zipcode.description];
+
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+
+    [geocoder geocodeAddressString:addressString completionHandler:^(NSArray *placemarks, NSError *error) {
+
+            for (CLPlacemark *placemark in placemarks) {
+                MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+                annotation.title = self.profileUser.name;
+                annotation.coordinate = placemark.location.coordinate;
+                [self.mapView addAnnotation:annotation];
+                [self.mapView setCenterCoordinate:placemark.location.coordinate animated:YES];
+                CLLocationCoordinate2D centerCoordinate = placemark.location.coordinate;
+                MKCoordinateSpan span = MKCoordinateSpanMake(0.075, 0.075);
+                MKCoordinateRegion region = MKCoordinateRegionMake(centerCoordinate, span);
+                [self.mapView setRegion:region animated:YES];
+            }
+        }];
+}
+
 
 
 @end

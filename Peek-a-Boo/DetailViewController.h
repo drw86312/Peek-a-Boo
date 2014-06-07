@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 #import "Photo.h"
+#import <MapKit/MapKit.h>
 
 @interface DetailViewController : UIViewController
 

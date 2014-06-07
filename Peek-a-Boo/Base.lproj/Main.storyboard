@@ -128,6 +128,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bjo-wS-CBB">
                                 <rect key="frame" x="0.0" y="290" width="320" height="278"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gMr-Tb-m9q" id="jem-it-gu3"/>
+                                </connections>
                             </mapView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CSz-Fw-tHs">
                                 <rect key="frame" x="0.0" y="122" width="320" height="379"/>

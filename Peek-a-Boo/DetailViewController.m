@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "EditViewController.h"
 
 @interface DetailViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -134,6 +135,13 @@
                 [self.mapView setRegion:region animated:YES];
             }
         }];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    EditViewController *editVC = segue.destinationViewController;
+    editVC.managedObjectContextEdit = self.managedObjectContextUser;
+    editVC.userEdit = self.profileUser;
 }
 
 

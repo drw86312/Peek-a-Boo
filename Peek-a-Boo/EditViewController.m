@@ -52,7 +52,15 @@
     self.userEdit.zipcode = @([self.zipLabel.text intValue]);
     self.userEdit.email = self.emailLabel.text;
     self.userEdit.phone = self.telephoneLabel.text;
-    self.userEdit.profilepic = self.picData;
+    if (self.picData != nil)
+    {
+         self.userEdit.profilepic = self.picData;
+    }
+    else
+    {
+        self.userEdit.profilepic = self.userEdit.profilepic;
+    }
+   
     
     [self.managedObjectContextEdit save:nil];
     [sender setEnabled:NO];

@@ -490,15 +490,17 @@
                     </view>
                     <navigationItem key="navigationItem" title="Edit" id="DIJ-Ck-9hv"/>
                     <connections>
-                        <outlet property="addressLabel" destination="MSs-Xd-Akk" id="1hj-qM-0pb"/>
-                        <outlet property="ageLabel" destination="Zjw-xm-1ZQ" id="ofb-jG-sD8"/>
-                        <outlet property="cityLabel" destination="BWA-n1-Wq0" id="6gb-w8-pEM"/>
-                        <outlet property="emailLabel" destination="Zfu-rt-iK8" id="ii4-OC-kua"/>
+                        <outlet property="addressTextField" destination="MSs-Xd-Akk" id="4TB-ky-o2d"/>
+                        <outlet property="ageTextField" destination="Zjw-xm-1ZQ" id="j5I-7M-TmP"/>
+                        <outlet property="cityTextField" destination="BWA-n1-Wq0" id="uWE-1Q-J6F"/>
+                        <outlet property="editPictureButton" destination="v3g-od-F2q" id="Wl7-ZI-UFn"/>
+                        <outlet property="emailTextField" destination="Zfu-rt-iK8" id="TL5-gb-A5b"/>
                         <outlet property="imageView" destination="Qdw-Pn-U20" id="Qah-g2-hZ4"/>
-                        <outlet property="nameLabel" destination="EpW-vP-Cec" id="kUy-qT-qOm"/>
-                        <outlet property="stateLabel" destination="eHH-NW-pta" id="zMM-Tx-nXa"/>
-                        <outlet property="telephoneLabel" destination="3fk-JY-Usu" id="HuM-pP-Uqs"/>
-                        <outlet property="zipLabel" destination="GgF-Na-Ab1" id="re5-cS-mtB"/>
+                        <outlet property="nameTextField" destination="EpW-vP-Cec" id="5QG-C0-me4"/>
+                        <outlet property="saveChangesButton" destination="ANQ-G5-NLd" id="a43-Dz-faD"/>
+                        <outlet property="stateTextField" destination="eHH-NW-pta" id="zCz-gp-feY"/>
+                        <outlet property="telephoneTextField" destination="3fk-JY-Usu" id="8nK-Vk-OgG"/>
+                        <outlet property="zipTextField" destination="GgF-Na-Ab1" id="hCG-N4-ZLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yx9-In-u9x" userLabel="First Responder" sceneMemberID="firstResponder"/>
